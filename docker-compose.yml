@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  mongo:
+    image: spring-boot-mongo
+  web:
+    image: manujgupta25/springbootmongo:V1.0
+    depends_on:
+      - mongo
+    ports:
+     - "8000:8000"

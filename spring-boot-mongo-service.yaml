@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-boot-mongo
+  labels:
+    app: spring-boot-mongo
+spec:
+  ports:
+    - port: 27017
+      protocol: TCP
+  selector:
+    appdb: spring-boot-mongo
+  type: NodePort
